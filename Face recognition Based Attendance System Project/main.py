@@ -4,7 +4,7 @@ import face_recognition
 
 imgShank = face_recognition.load_image_file('ImageBasic/Shank.jpg')
 imgShank = cv2.cvtColor(imgShank,cv2.COLOR_BGR2RGB)
-imgTest = face_recognition.load_image_file('ImageBasic/SHankTest.jpg')
+imgTest = face_recognition.load_image_file('ImageBasic/ShankTest.jpg')
 imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
 
 faceLoc = face_recognition.face_locations(imgShank)[0]

@@ -32,7 +32,7 @@ def markAttendance (name):
             nameList.append(entry[0])
         if name not in nameList:
             now = datetime.now()
-            dtString = now.strftime('%H:%M:%S')
+            dtString = now.strftime('%d-%m-%Y %H:%M:%S')  
             f.writelines(f'\n{name},{dtString}')
 
 
@@ -67,17 +67,3 @@ while True:
 
     cv2.imshow('Webcam',img)
     cv2.waitKey(1)
-
-
-# faceLoc = face_recognition.face_locations(imgShank)[0]
-# encodeShank = face_recognition.face_encodings(imgShank)[0]
-# cv2.rectangle(imgShank,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
-#
-# faceLocTest = face_recognition.face_locations(imgTest)[0]
-# encodeTest = face_recognition.face_encodings(imgTest)[0]
-# cv2.rectangle(imgTest,(faceLocTest[3],faceLocTest[0]),(faceLocTest[1],faceLocTest[2]),(255,0,255),2)
-#
-# results = face_recognition.compare_faces([encodeShank],encodeTest)
-# faceDis = face_recognition.face_distance([encodeShank],encodeTest)
-# print(results,faceDis)
-# cv2.putText(imgTest,f'{results} {round(faceDis[0],2)}',(50,50),cv2.FONT_HERSHEY_TRIPLEX,1,(0,0,255),2)
